@@ -9,17 +9,17 @@ export const LoginForm = ({handleChange,mail,pass,handleOnSubmit,formSwitcher}) 
     <Container className='logform'>
         <Row>
             <Col>
-                <h1 className='text-info text-center'>Client Login</h1>
+                <h1 className='text-info text-center' style={{color:'black'}}>Client Login</h1>
                 <hr/>
                 <Form  onSubmit={handleOnSubmit}>
                     <Form.Group>
-                        <Form.Label className='label'>Email Address</Form.Label>
+                        <Form.Label className='label'>Enter your credentials</Form.Label>
                         <Form.Control type="email" name="email" value={mail} onChange={handleChange} placeholder="Enter Email Address" required />
                     </Form.Group>
 
                     <Form.Group>
-                        <Form.Label className='label'>Password</Form.Label>
-                        <Form.Control type="password" name="password" value={pass} onChange={handleChange} placeholder="Enter Password" required/>
+                        {/* <Form.Label className='label'>Password</Form.Label> */}
+                        <Form.Control className='password' type="password" name="password" value={pass} onChange={handleChange} placeholder="Enter Password" required/>
                     </Form.Group>
                     <Button type="submit" className='login-button'>Login</Button>
                 </Form>
