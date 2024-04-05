@@ -5,7 +5,8 @@ export const TicketTable = ({tickets}) => {
   return (
     <div>
 
-<Table bordered hover variant="light">
+{
+  tickets?(<Table bordered hover variant="light">
       <thead>
         <tr>
           <th>#</th>
@@ -36,7 +37,15 @@ export const TicketTable = ({tickets}) => {
       </tbody>
     </Table>
   
+):(<Table bordered hover variant="light"><thead>
+        <tr>
+          <th>#</th>
+          <th>Subject</th>
+          <th>Status</th>
+          <th>Opened date</th></tr></thead><tbody>
+          <tr><td colSpan={4} className='text-center'>No Tickets to show</td></tr>
+          </tbody></Table>)}
 
     </div>
-  )
-}
+  );
+};

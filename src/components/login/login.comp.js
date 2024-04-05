@@ -6,10 +6,10 @@ import { propTypes } from 'react-bootstrap/esm/Image';
 export const LoginForm = ({handleChange,mail,pass,handleOnSubmit,formSwitcher}) => {
 
   return (
-    <Container className='logform'>
+    <Container className='logform' style={{color:'black'}}>
         <Row>
             <Col>
-                <h1 className='text-info text-center' style={{color:'black'}}>Client Login</h1>
+                <h1 className=' text-center' >User Login</h1>
                 <hr/>
                 <Form  onSubmit={handleOnSubmit}>
                     <Form.Group>

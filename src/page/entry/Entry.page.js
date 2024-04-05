@@ -2,15 +2,16 @@ import React from "react";
 
 
 import "./entry.style.css";
-import Jumbotron from "../../components/jumbotron";
-import { LoginForm } from "../../components/login.comp";
+import Jumbotron from "../../components/login/jumbotron";
+
+import { LoginForm } from "../../components/login/login.comp";
 // import { LoginForm } from "../../components/login.comp";
 import { useState } from 'react';
 function Entry() {
     
     return (
       <div className="entry-page bg-info">
-        <Jumbotron className='form-box'></Jumbotron>
+        <Jumbotron className='form-box' ></Jumbotron>
       </div>
     );
   }

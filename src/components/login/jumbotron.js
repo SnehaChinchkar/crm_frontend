@@ -1,8 +1,9 @@
 import React from "react";
-import './jumbotron.css';
+
 import { LoginForm } from "./login.comp";
 import { useState } from "react";
-import { ResetPassword } from "./ResetPassword/PasswordReset.comp";
+import { ResetPassword } from "../ResetPassword/PasswordReset.comp";
+import './jumbotron.css';
 function Jumbotron(){
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
@@ -41,16 +42,9 @@ function Jumbotron(){
         console.log(email);
     };
     return (
-        <div class="bs-example" >
-            <div class="react-live-preview">
-                <div class="jumbotron">
-                    {/* <h1>Hello, world!</h1>
-                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-                    </p>
-                    <p>
-                    <button type="button" class="btn btn-primary">Learn more</button>
-                    </p> */}
-                    
+        <div className="bs-example" >
+            <div className="react-live-preview">
+                <div className="jumbotron">
                     {formLoad=='login' && <LoginForm handleChange={handleChange} mail={email} pass={password} handleOnSubmit={handleOnSubmit} formSwitcher={formSwitcher}/>}
                     {formLoad=='reset' && <ResetPassword handleChange={handleChange} mail={email} pass={password} handleOnResetSubmit={handleOnResetSubmit} formSwitcher={formSwitcher}/>}
                 </div>
