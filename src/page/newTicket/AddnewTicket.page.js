@@ -7,7 +7,7 @@ export const AddnewTicket = () => {
     <Container>
         <Row>
             <Col>
-            <PageBreadcrumb pagename="New Ticket"/>
+            <PageBreadcrumb pagename="Add new ticket"/>
             </Col>
         </Row>
         <Row>

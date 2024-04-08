@@ -3,6 +3,8 @@ import { Navbar,Nav} from 'react-bootstrap';
 import logo from '../../assets/img/logo.png';
 import './Header.css';
 import '../../App.css';
+// import {Link} from 'react-router-dom';
+import {LinkContainer} from 'react-router-bootstrap'; 
 export const Header = () => {
   return (
     <Navbar collapseOnSelect bg='info' variant='dark' expand='md'>
@@ -13,9 +15,16 @@ export const Header = () => {
         <Navbar.Collapse id='basic-navbar-nav'>
             
             <Nav className='ml-auto'>
-                <Nav.Link href='/dashboard'>Dashboard</Nav.Link>
-                <Nav.Link href='/dashboard'>Ticket</Nav.Link>
-                <Nav.Link href='/dashboard' >Logout</Nav.Link>
+
+            {/* <Link to href='/dashboard'>Dashboard</Link>
+                <Link to href='/Tickets'>Ticket List</Link>
+                <Link to href='' >Logout</Link> */}
+                <LinkContainer to='/dashboard'><Nav.Link >Dashboard</Nav.Link></LinkContainer>
+                <LinkContainer to='/Tickets'><Nav.Link >Ticket List</Nav.Link></LinkContainer>
+                <LinkContainer to='/Entry'><Nav.Link  >Logout</Nav.Link></LinkContainer>
+                
+                
+                
             </Nav>
             {/* </div> */}
         </Navbar.Collapse>
