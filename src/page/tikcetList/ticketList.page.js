@@ -4,6 +4,7 @@ import { PageBreadcrumb } from '../../components/pageBreadcrumb/PageBreadcrumb.c
 import { SearchForm } from '../../components/search-form/searchForm.comp';
 import { TicketTable } from '../../components/ticket-table/TicketTable.comp';
 import tickets from '../../assets/data/dummy-tickets.json';
+import {Link} from 'react-router-dom';
 export const TicketList= () => {
     const [str,setStr]=useState('');
     const [dispTicket,setDispTicket]=useState(tickets);
@@ -27,7 +28,7 @@ export const TicketList= () => {
             return;
         } 
 
-        const displayTickets=tickets.filter(row=>row.Subject.toLowerCase().includes(strr.toLowerCase()))
+        const displayTickets=tickets.filter(row=>row.Departure_date.toLowerCase().includes(strr.toLowerCase()))
         setDispTicket(displayTickets);
        
     }
@@ -40,7 +41,9 @@ export const TicketList= () => {
         </Row>
         <Row className='mt-4'>
             <Col>
+            <Link to='/Add-new-ticket'>
                 <Button variant='info'>Add New Ticket</Button>
+            </Link>
             </Col>
             <Col className='text-right'>
                 <SearchForm handleOnChange={handleOnChange} str={str}/>
@@ -49,7 +52,7 @@ export const TicketList= () => {
         <hr/>
         <Row>
             <Col>
-                //table (Instead of ticket table i will train add schedule)
+                //table (Link to remove from ticket list)
                 <TicketTable tickets={dispTicket}/>
             </Col>
         </Row>

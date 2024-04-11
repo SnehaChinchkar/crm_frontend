@@ -6,8 +6,10 @@ import '../../App.css';
 // import {Link} from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap'; 
 export const Header = () => {
+  // const History=useHistory();
   return (
-    <Navbar collapseOnSelect bg='info' variant='dark' expand='md'>
+    <Navbar collapseOnSelect bg='info' variant='dark' expand='md'>  
+    {/*Change background color here by changeing bg  */}
         <Navbar.Brand>
             <img src={logo} alt='logo' width="50px"/>
         </Navbar.Brand>
@@ -16,13 +18,13 @@ export const Header = () => {
             
             <Nav className='ml-auto'>
 
-            {/* <Link to href='/dashboard'>Dashboard</Link>
+                {/* <Link to href='/dashboard'>Dashboard</Link>
                 <Link to href='/Tickets'>Ticket List</Link>
                 <Link to href='' >Logout</Link> */}
-                <LinkContainer to='/dashboard'><Nav.Link >Dashboard</Nav.Link></LinkContainer>
+                <LinkContainer to='/dashboard' ><Nav.Link >Dashboard</Nav.Link></LinkContainer>
                 <LinkContainer to='/Tickets'><Nav.Link >Ticket List</Nav.Link></LinkContainer>
-                <LinkContainer to='/Entry'><Nav.Link  >Logout</Nav.Link></LinkContainer>
-                
+                <LinkContainer to='/Login'><Nav.Link  >Logout</Nav.Link></LinkContainer>
+                {/* Change color of default layout here  style= 'color': '#333'*/}
                 
                 
             </Nav>

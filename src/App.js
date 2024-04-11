@@ -7,6 +7,7 @@ import { AddnewTicket } from './page/newTicket/AddnewTicket.page';
 import { TicketList } from './page/tikcetList/ticketList.page';
 import { Ticket } from './page/ticketPage/ticket.page';
 import { BrowserRouter ,Routes, Route} from 'react-router-dom';
+import {Home } from './page/Home/Home.page'
 // import {Button} from 'react-bootstrap'
 function App() {
   return (
@@ -14,17 +15,16 @@ function App() {
       
       <BrowserRouter>
       <Routes>
-      <Route index element ={<Entry/>}/>
-      <Route path="/Entry"  element={<Entry/>}/>
+      {/* <Route index element ={<Entry/>}/> */}
+      <Route index element={<DefaultLayout><Home/></DefaultLayout>}/>
+      <Route path="/Login"  element={<Entry/>}/>
       
-      </Routes>
       
-      <Routes>
       <Route path="/Dashboard" element={<DefaultLayout><Dashboard/></DefaultLayout>}/>
-      <Route path='/Add-ticket' element={<DefaultLayout><AddnewTicket/></DefaultLayout>}/>
+      <Route path='/Add-new-ticket' element={<DefaultLayout><AddnewTicket/></DefaultLayout>}/>
       <Route path='/Tickets' element={<DefaultLayout><TicketList/></DefaultLayout>}/>
-      <Route path='Ticket/:tid' element={<DefaultLayout><Ticket/></DefaultLayout>}/>
-     
+      {/* <Route path='/Ticket/:tId' element={<DefaultLayout><Ticket/></DefaultLayout>}/> */}
+      
         </Routes>
       </BrowserRouter>
     </div>

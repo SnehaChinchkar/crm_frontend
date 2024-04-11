@@ -1,38 +1,26 @@
 [
     {
-        "id":1,
-        "Subject":"ssl issue",
-        "Status":"Client response pending",
-        "OpenedDate":"01-04-24",
-        "history":[
-            {
-                "date":"20-10-10",
-                "message":"mesg 1",
-                "messageby":"Client"
-            },
-            {
-                "date":"30-10-10",
-                "message":"mesg 2",
-                "messageby":"Operator"
-            },
-            {
-                "date":"2-11-10",
-                "message":"mesg 3",
-                "messageby":"Client"
-            }
-        ]
+        
+        "Ticket_id":1001,
+        "Train_id":1,
+        "User_id":2001,
+        "Departure_station_id":101,
+        "Arrival_station_id":201,
+        "Departure_date":"2024-04-10",
+        "Num_tickets":2,
+        "Total_fare":1000.00,
+        "id":1
     },
     {
-        "id":2,
-        "Subject":"ssl issue",
-        "Status":"Client response pending",
-        "OpenedDate":"01-04-24",
-        "history":[
-            {
-                "date":"20-10-10",
-                "message":"mesg 1",
-                "messageby":"Client"
-            }
-        ]
+        
+        "Ticket_id":1002,
+        "Train_id":2,
+        "User_id":2002,
+        "Departure_station_id":102,
+        "Arrival_station_id":202,
+        "Departure_date":"2024-05-12",
+        "Num_tickets":1,
+        "Total_fare":600.00,
+        "id":2
     }
 ]
