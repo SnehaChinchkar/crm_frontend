@@ -1,0 +1,16 @@
+.input-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40px;
+    color: #666;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.ui-float-label input:focus + .input-label,
+.ui-float-label input:not(:placeholder-shown) + .input-label {
+    top: 10px;
+    font-size: 12px;
+    color: #333;
+}

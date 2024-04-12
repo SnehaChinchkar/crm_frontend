@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <!-- Add any necessary CSS files or stylesheets here -->
+    <style>
+        /* Add styles from login.comp.css */
+        .logform {
+            /* Your styles here */
+            margin-top: 50px; 
+            background-color: rgba(248, 249, 250, 0.4); /*Adjust the opacity of login page*/
+            
+            padding: 30px;
+            border-radius: 10px; 
+            color: black;
+            font-weight: bold;
+                    }
+                    h1{
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    .login-button {
+        margin-top: 20px; 
+        background-color: #007bff; 
+        color: white;
+        border: none; 
+        border-radius: 10px; 
+        padding: 10px 20px; 
+        cursor: pointer; 
+    }
+
+    .login-button:hover {
+    background-color: #0056b3; 
+    }
+
+    .login-button:active {
+    background-color: #004080; 
+    }
+
+    .login-button:focus {
+    outline: none; 
+    }
+    .password{
+    margin-top: 20px;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="logform" style="color: black;">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">User Login</h1>
+                <hr>
+                <form>
+                    <div class="form-group">
+                        <label class="label">Enter your credentials</label>
+                        <input type="email" name="email" value="" placeholder="Enter Email Address" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <!-- <label class="label">Password</label> -->
+                        <input class="password" type="password" name="password" value="" placeholder="Enter Password" required>
+                    </div>
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a href="#" onclick="formSwitcher('reset')">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add any necessary JavaScript files or scripts here -->
+    <script>
+        function formSwitcher(formType) {
+            // Define your form switching logic here
+        }
+    </script>
+</body>
+</html>
